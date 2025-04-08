@@ -1,0 +1,15 @@
+<h1>Search Form Result</h1>
+<div data-sly-use.pages="${'com.komatsu.core.models.Form'}" />
+
+<div data-sly-test="${itemList.count > 0}">
+    <div data-sly-list.item="${pages.results}">
+        ${item.title}
+        ${item.description}
+        ${item.image}
+        ${item.lastModified}
+    </div>
+</div>
+
+<div data-sly-test="${itemList.count == 0}">
+    <h4>text alerting the user</h4>
+</div>
